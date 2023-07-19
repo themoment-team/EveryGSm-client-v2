@@ -1,7 +1,7 @@
 import type { FC } from "react";
 import * as S from "./style";
 import Image from "next/image";
-import { Input } from "../../components";
+import { Input } from "admin/components";
 interface InputBoxProps {
   title: string;
 }

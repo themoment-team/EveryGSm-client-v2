@@ -1,8 +1,8 @@
 import type { FC } from "react";
 import * as S from "./style";
 import Image, { ImageLoader } from "next/image"; // ImageLoader를 import
-import * as I from "../../assets";
-import { Contentstype } from "../../interface/Approve";
+import * as I from "admin/assets";
+import { Contentstype } from "admin/interface/Approve";
 
 interface ApproveItemProps {
   post: Contentstype;

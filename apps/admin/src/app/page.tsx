@@ -1,5 +1,5 @@
 "use client";
-import * as S from "../../styles/page/page";
+import * as S from "styles/page/page";
 const postList = [
   {
     projectId: 0,

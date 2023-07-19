@@ -1,7 +1,7 @@
 import type { FC } from "react";
 import * as S from "./style";
-import ApproveItem from "../ApproveItem";
-import { Contentstype } from "../../interface/Approve";
+import ApproveItem from "admin/components/ApproveItem";
+import { Contentstype } from "admin/interface/Approve";
 import Link from "next/link";
 import { css } from "@emotion/react";
 interface ApproveItemListProps {

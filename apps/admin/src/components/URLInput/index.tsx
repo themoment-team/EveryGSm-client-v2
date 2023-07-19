@@ -2,8 +2,8 @@
 import type { FC } from "react";
 import * as S from "./style";
 import { useState } from "react";
-import { Input } from "../../components";
-import { PlusIcon, Trashcan } from "../../assets";
+import { Input } from "admin/components";
+import { PlusIcon, Trashcan } from "admin/assets";
 interface URLInputProps {}
 
 const URLInput: FC<URLInputProps> = () => {

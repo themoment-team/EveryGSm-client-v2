@@ -1,6 +1,6 @@
 "use client";
 
-import { GlobalStyle, theme } from "../../../../packages/common";
+import { GlobalStyle, theme } from "common";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 import Providers from "./providers";

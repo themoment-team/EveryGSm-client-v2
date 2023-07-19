@@ -1,6 +1,6 @@
 import type { FC } from "react";
 import * as S from "./style";
-import { PlusIcon } from "../../assets";
+import { PlusIcon } from "admin/assets";
 import { useState } from "react";
 interface ApplyBtnProps {}
 
