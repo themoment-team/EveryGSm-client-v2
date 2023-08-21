@@ -3,6 +3,7 @@ import * as S from "./style";
 import Image, { ImageLoader } from "next/image"; // ImageLoader를 import
 import * as I from "../../assets";
 import { Contentstype } from "../../interface/Approve";
+import { usePatchApprove, useDeleteApprove } from "api/admin";
 
 interface ApproveItemProps {
   post: Contentstype;
@@ -31,13 +32,24 @@ const ApproveItem: FC<ApproveItemProps> = ({
     createdAt,
   },
 }) => {
-  const handleApproveClick = () => {
+  const patchApprove = () => {
     const result = confirm("승인하시겠습니까?");
+    patchMutate(userSeq, {
+      onSuccess: () => {
+        refetch();
+      },
+    });
   };
 
-  const handleRefuseClick = () => {
+  const deleteApprove = () => {
     const result = confirm("거절하시겠습니까?");
+    deleteMutate(userSeq, {
+      onSuccess: () => {
+        refetch();
+      },
+    });
   };
+
   return (
     <S.ApproveItem>
       <S.ProjectWrap>
@@ -54,11 +66,11 @@ const ApproveItem: FC<ApproveItemProps> = ({
         </S.ProjectDescWrap>
       </S.ProjectWrap>
       <S.Approve>
-        <button className="approve" onClick={handleApproveClick}>
+        <button className="approve" onClick={patchApprove}>
           승인
         </button>
         <I.VerticalBarIcon />
-        <button className="refuse" onClick={handleRefuseClick}>
+        <button className="refuse" onClick={deleteApprove}>
           거절
         </button>
       </S.Approve>

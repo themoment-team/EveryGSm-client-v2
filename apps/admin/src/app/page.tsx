@@ -1,4 +1,5 @@
 "use client";
+import { Button } from "ui";
 import * as S from "../../styles/page/page";
 const postList = [
   {
@@ -224,6 +225,7 @@ export default function Home() {
           <S.Unapprove>등록요청된 프로젝트</S.Unapprove>
           <ApproveItemList postList={postList} />
         </S.ContentBox>
+        <Button />
       </S.MainContainer>
       <Footer />
     </div>
